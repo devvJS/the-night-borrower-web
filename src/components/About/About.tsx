@@ -2,7 +2,7 @@ import Container from '../../layout/Container'
 
 export default function About() {
   return (
-    <section id="about" aria-label="About" className="py-24">
+    <section id="about" aria-label="About" className="scroll-mt-16 border-t border-primary py-24">
       <Container>
         <h2 className="font-heading text-3xl text-text">About the Game</h2>
         <p className="mt-2 text-sm uppercase tracking-widest text-secondary">

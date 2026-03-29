@@ -2,7 +2,7 @@ import Container from '../../layout/Container'
 
 export default function Devlog() {
   return (
-    <section id="devlog" aria-label="Development log" className="py-24">
+    <section id="devlog" aria-label="Development log" className="scroll-mt-16 border-t border-primary py-24">
       <Container>
         <h2 className="font-heading text-3xl text-text">Development Log</h2>
         <p className="mt-2 text-sm uppercase tracking-widest text-secondary">

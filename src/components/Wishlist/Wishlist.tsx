@@ -2,7 +2,7 @@ import Container from '../../layout/Container'
 
 export default function Wishlist() {
   return (
-    <section id="wishlist" aria-label="Wishlist" className="py-24">
+    <section id="wishlist" aria-label="Wishlist" className="scroll-mt-16 border-t border-primary bg-primary/5 py-24">
       <Container className="text-center">
         <h2 className="font-heading text-3xl text-text">Wishlist on Steam</h2>
         <p className="mt-2 text-sm uppercase tracking-widest text-secondary">

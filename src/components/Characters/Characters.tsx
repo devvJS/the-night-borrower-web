@@ -2,7 +2,7 @@ import Container from '../../layout/Container'
 
 export default function Characters() {
   return (
-    <section id="characters" aria-label="Characters" className="py-24">
+    <section id="characters" aria-label="Characters" className="scroll-mt-16 border-t border-primary py-24">
       <Container>
         <h2 className="font-heading text-3xl text-text">Characters</h2>
         <p className="mt-2 text-sm uppercase tracking-widest text-secondary">

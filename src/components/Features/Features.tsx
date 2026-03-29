@@ -2,7 +2,7 @@ import Container from '../../layout/Container'
 
 export default function Features() {
   return (
-    <section id="features" aria-label="Features" className="py-24">
+    <section id="features" aria-label="Features" className="scroll-mt-16 border-t border-primary bg-primary/5 py-24">
       <Container>
         <h2 className="font-heading text-3xl text-text">Features</h2>
         <p className="mt-2 text-sm uppercase tracking-widest text-secondary">
