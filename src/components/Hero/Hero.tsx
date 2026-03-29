@@ -45,7 +45,8 @@ export default function Hero() {
           className="font-heading text-5xl leading-tight text-text sm:text-6xl md:text-7xl"
           variants={fadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ margin: '-80px' }}
           custom={0}
         >
           The Night Borrower
@@ -55,7 +56,8 @@ export default function Hero() {
           className="mt-4 max-w-lg text-lg text-secondary sm:text-xl"
           variants={fadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ margin: '-80px' }}
           custom={1}
         >
           Something watches while you sleep.
@@ -65,7 +67,8 @@ export default function Hero() {
           className="mt-10 flex flex-col gap-4 sm:flex-row"
           variants={fadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ margin: '-80px' }}
           custom={2}
         >
           <a
