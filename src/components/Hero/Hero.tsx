@@ -1,4 +1,14 @@
+import { motion } from 'framer-motion'
 import Container from '../../layout/Container'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.2 + i * 0.15, duration: 0.6, ease: 'easeOut' as const },
+  }),
+}
 
 export default function Hero() {
   return (
@@ -31,15 +41,33 @@ export default function Hero() {
 
       {/* Content container */}
       <Container className="relative z-10 flex flex-col items-center text-center">
-        <h1 className="font-heading text-5xl leading-tight text-text sm:text-6xl md:text-7xl">
+        <motion.h1
+          className="font-heading text-5xl leading-tight text-text sm:text-6xl md:text-7xl"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0}
+        >
           The Night Borrower
-        </h1>
+        </motion.h1>
 
-        <p className="mt-4 max-w-lg text-lg text-secondary sm:text-xl">
+        <motion.p
+          className="mt-4 max-w-lg text-lg text-secondary sm:text-xl"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={1}
+        >
           Something watches while you sleep.
-        </p>
+        </motion.p>
 
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+        <motion.div
+          className="mt-10 flex flex-col gap-4 sm:flex-row"
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={2}
+        >
           <a
             href="#wishlist"
             className="inline-block rounded border border-text bg-text/10 px-8 py-3 text-sm font-medium text-text transition-colors hover:bg-text/20"
@@ -52,7 +80,7 @@ export default function Hero() {
           >
             Watch Teaser
           </a>
-        </div>
+        </motion.div>
       </Container>
     </section>
   )
