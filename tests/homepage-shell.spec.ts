@@ -31,9 +31,9 @@ test.describe('homepage shell structure', () => {
     await expect(region.getByRole('article')).toHaveCount(4)
   })
 
-  test('Screenshots section contains a gallery placeholder', async ({ page }) => {
+  test('Screenshots section contains gallery tiles', async ({ page }) => {
     const region = page.getByRole('region', { name: 'Screenshots' })
-    await expect(region.getByText('Screenshot placeholder')).toBeVisible()
+    await expect(region.getByRole('figure')).toHaveCount(6)
   })
 
   test('Devlog section contains an entry placeholder', async ({ page }) => {
