@@ -26,9 +26,9 @@ test.describe('homepage shell structure', () => {
     await expect(region.getByRole('article')).toHaveCount(4)
   })
 
-  test('Characters section contains a grid placeholder', async ({ page }) => {
+  test('Characters section contains character cards', async ({ page }) => {
     const region = page.getByRole('region', { name: 'Characters' })
-    await expect(region.getByText('Coming soon')).toBeVisible()
+    await expect(region.getByRole('article')).toHaveCount(4)
   })
 
   test('Screenshots section contains a gallery placeholder', async ({ page }) => {
