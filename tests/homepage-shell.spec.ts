@@ -12,7 +12,7 @@ test.describe('homepage shell structure', () => {
       { name: 'Characters', heading: 'Characters' },
       { name: 'Screenshots', heading: 'Screenshots' },
       { name: 'Development log', heading: 'Development Log' },
-      { name: 'Wishlist', heading: 'Wishlist on Steam' },
+      { name: 'Wishlist', heading: 'Don\u2019t Look Away' },
     ]
 
     for (const section of sections) {
@@ -41,9 +41,9 @@ test.describe('homepage shell structure', () => {
     await expect(region.getByRole('article')).toHaveCount(4)
   })
 
-  test('Wishlist section contains a CTA placeholder', async ({ page }) => {
+  test('Wishlist section contains a disabled CTA', async ({ page }) => {
     const region = page.getByRole('region', { name: 'Wishlist' })
-    await expect(region.getByText('Steam link coming soon')).toBeVisible()
+    await expect(region.getByRole('button', { name: 'The path is not yet open.' })).toBeDisabled()
   })
 })
 
