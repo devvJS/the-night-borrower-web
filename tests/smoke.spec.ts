@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('smoke tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    await page.goto('/?mode=live')
   })
 
   test('app loads successfully', async ({ page }) => {
