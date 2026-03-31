@@ -46,7 +46,7 @@ export default function Hero() {
           viewBox="25 10 360 280"
           aria-hidden="true"
           data-testid="hero-glyph"
-          className="mb-6 h-16 w-16"
+          className="mb-6 h-24 w-24"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

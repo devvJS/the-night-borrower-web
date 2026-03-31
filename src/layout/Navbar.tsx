@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Container from './Container'
-import navbarLogoUrl from '../assets/glyph/navbar-logo.svg'
 
 const links = [
   { label: 'About', href: '#about' },
@@ -18,7 +17,9 @@ export default function Navbar() {
     <nav aria-label="Main navigation" className="fixed top-0 z-50 w-full border-b border-primary bg-bg/90 backdrop-blur-sm">
       <Container className="flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2 font-heading text-lg text-text" aria-label="The Night Borrower — home">
-          <img src={navbarLogoUrl} alt="" aria-hidden="true" className="h-7 w-auto" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 385 280" fill="currentColor" aria-hidden="true" className="h-8 w-8">
+            <path d="M198 29L204 30L203 271L197 270ZM197 31L43 33L38 37L35 142L37 263L42 268L197 271L197 264L50 261L46 258L43 143L45 44L49 40L197 38ZM204 30L358 34L363 38L366 144L363 264L358 269L204 271L204 264L352 261L356 258L359 143L356 44L352 41L204 38Z" />
+          </svg>
           The Night Borrower
         </a>
 
