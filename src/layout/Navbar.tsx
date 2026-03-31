@@ -45,13 +45,15 @@ export default function Navbar() {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+          {menuOpen ? (
+            <svg className="h-6 w-6" viewBox="8 6 174 172" fill="currentColor">
+              <path d="M18 20L24 17L98 82L166 158L162 165L94 94L26 24ZM160 14L166 18L100 90L30 166L24 161L90 86L156 16Z" />
+            </svg>
+          ) : (
+            <svg className="h-6 w-6" viewBox="0 12 200 138" fill="currentColor">
+              <path d="M15 29L44 22L84 20L131 25L168 31L133 39L87 38L47 36ZM8 82L51 74L101 71L149 73L193 78L147 87L97 88L51 86ZM32 133L71 127L114 123L156 122L186 128L159 139L117 141L69 138Z" />
+            </svg>
+          )}
         </button>
       </Container>
 
