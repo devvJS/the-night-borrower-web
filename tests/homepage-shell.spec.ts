@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('homepage shell structure', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    await page.goto('/?mode=live')
   })
 
   test('each section has a heading and subheading', async ({ page }) => {
@@ -49,7 +49,7 @@ test.describe('homepage shell structure', () => {
 
 test.describe('anchor navigation', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    await page.goto('/?mode=live')
   })
 
   test('navbar links navigate to correct sections', async ({ page }) => {

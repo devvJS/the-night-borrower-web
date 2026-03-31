@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('footer', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    await page.goto('/?mode=live')
   })
 
   test('renders the wordmark', async ({ page }) => {
