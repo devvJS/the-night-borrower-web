@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('wishlist section', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    await page.goto('/?mode=live')
   })
 
   test('section renders', async ({ page }) => {
