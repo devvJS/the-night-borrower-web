@@ -41,13 +41,31 @@ export default function Hero() {
 
       {/* Content container */}
       <Container className="relative z-10 flex flex-col items-center text-center">
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="25 10 360 280"
+          aria-hidden="true"
+          data-testid="hero-glyph"
+          className="mb-6 h-16 w-16"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ margin: '-80px' }}
+          custom={0}
+        >
+          <path
+            fill="#D6D3C4"
+            d="M348 95L319 117L284 133L249 144L202 151L154 142L117 130L81 113L47 88L78 63L112 45L149 34L197 30L246 37L274 31L267 44L242 53L197 44L151 53L118 65L86 79L58 90L86 102L118 115L151 127L197 133L242 127L278 115L313 102L337 95ZM195 151L193 268L206 271L208 151Z"
+          />
+        </motion.svg>
+
         <motion.h1
           className="font-heading text-5xl leading-tight text-text sm:text-6xl md:text-7xl"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ margin: '-80px' }}
-          custom={0}
+          custom={1}
         >
           The Night Borrower
         </motion.h1>
@@ -58,7 +76,7 @@ export default function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={{ margin: '-80px' }}
-          custom={1}
+          custom={2}
         >
           Something watches while you sleep.
         </motion.p>
@@ -69,20 +87,22 @@ export default function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={{ margin: '-80px' }}
-          custom={2}
+          custom={3}
         >
-          <a
-            href="#wishlist"
-            className="inline-block rounded border border-text bg-text/10 px-8 py-3 text-sm font-medium text-text transition-colors hover:bg-text/20"
+          <button
+            type="button"
+            disabled
+            className="inline-block cursor-not-allowed rounded border border-text bg-text/10 px-8 py-3 text-sm font-medium text-text/60"
           >
-            Wishlist on Steam
-          </a>
-          <a
-            href="#"
-            className="inline-block rounded border border-secondary px-8 py-3 text-sm font-medium text-secondary transition-colors hover:border-text hover:text-text"
+            You&rsquo;ll know when it&rsquo;s time.
+          </button>
+          <button
+            type="button"
+            disabled
+            className="inline-block cursor-not-allowed rounded border border-secondary px-8 py-3 text-sm font-medium text-secondary/60"
           >
-            Watch Teaser
-          </a>
+            Close your eyes. Not yet.
+          </button>
         </motion.div>
       </Container>
     </section>
