@@ -36,9 +36,9 @@ test.describe('homepage shell structure', () => {
     await expect(region.getByRole('figure')).toHaveCount(6)
   })
 
-  test('Devlog section contains an entry placeholder', async ({ page }) => {
+  test('Devlog section contains entries', async ({ page }) => {
     const region = page.getByRole('region', { name: 'Development log' })
-    await expect(region.getByText('Development updates')).toBeVisible()
+    await expect(region.getByRole('article')).toHaveCount(4)
   })
 
   test('Wishlist section contains a CTA placeholder', async ({ page }) => {
